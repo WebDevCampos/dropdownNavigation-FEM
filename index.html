@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--#region Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+    <!--#endregion Fonts-->
+    <link rel="icon" type="favicon" sizes="32x32" href="./images/favicon.ico" />
+    <link rel="stylesheet" href="styles/index.css" />
+    <title>Frontend Mentor | Intro section with dropdown navigation</title>
+  </head>
+  <body>
+    <main>
+      <header>
+        <figure><img src="./images/logo.svg" alt="Snap company logo" /></figure>
+        <nav>
+          <div>
+            <ul style="display: flex">
+              <li class="top-feat" style="position: relative">
+                Features
+                <ul class="top-feat-content">
+                  <li>
+                    <img src="images/icon-todo.svg" />
+                    Todo List
+                  </li>
+                  <li>
+                    <img src="images/icon-calendar.svg" />
+                    Calendar
+                  </li>
+                  <li>
+                    <img src="images/icon-reminders.svg" />
+                    Reminders
+                  </li>
+                  <li>
+                    <img src="images/icon-planning.svg" />
+                    Planning
+                  </li>
+                </ul>
+              </li>
+              <li class="top-company">Company</li>
+              <li class="top-carrers"><a href="">Careers</a></li>
+              <li class="top-about"><a href="">About</a></li>
+            </ul>
+          </div>
+        </nav>
+        <div class="user-area">
+          <a>Login</a>
+          <a>Register</a>
+        </div>
+        <img src="/images/icon-menu.svg" class="open-menu-btn" />
+      </header>
+
+      <div class="content">
+        <section class="img-section">
+          <picture>
+            <source
+              media="(min-width: 1070px)"
+              srcset="images/image-hero-desktop.png"
+            />
+
+            <img
+              src="images/image-hero-mobile.png"
+              alt=""
+              srcset=""
+              style="width: 100%"
+            />
+          </picture>
+        </section>
+        <section class="text-section">
+          <div
+            style="
+              height: 60%;
+              display: flex;
+              flex-direction: column;
+              justify-content: space-between;
+              margin-top: 5rem;
+            "
+          >
+            <h1>Make remote work</h1>
+            <p style="font-size: 2rem; line-height: 1.5">
+              Get your team in sync, no matter your location. Streamline
+              processes, create team rituals, and watch productivity soar.
+            </p>
+            <a href="#" class="btn">Learn more</a>
+          </div>
+
+          <section class="clients-section">
+            <figure><img src="/images/client-databiz.svg" alt="" /></figure>
+
+            <figure><img src="/images/client-audiophile.svg" alt="" /></figure>
+
+            <figure><img src="/images/client-meet.svg" alt="" /></figure>
+
+            <figure><img src="/images/client-maker.svg" alt="" /></figure>
+          </section>
+        </section>
+      </div>
+
+      <aside>
+        <div class="sidenavbar">
+          <figure class="close-sidenav">
+            <img
+              src="/images/icon-close-menu.svg"
+              alt="close side navigation button"
+            />
+          </figure>
+
+          <details style="padding: 2rem">
+            <summary style="font-size: 2rem">Features</summary>
+
+            <div style="margin: 1rem 0">
+              <ul>
+                <li>
+                  <img src="images/icon-todo.svg" />
+                  Todo List
+                </li>
+                <li>
+                  <img src="images/icon-calendar.svg" />
+                  Calendar
+                </li>
+                <li>
+                  <img src="images/icon-reminders.svg" />
+                  Reminders
+                </li>
+                <li>
+                  <img src="images/icon-planning.svg" />
+                  Planning
+                </li>
+              </ul>
+            </div>
+          </details>
+
+          <details style="padding: 2rem">
+            <summary style="font-size: 2rem">Company</summary>
+
+            <div style="margin: 1rem 0">
+              <ul>
+                <li>History</li>
+                <li>Our Team</li>
+                <li>Blog</li>
+              </ul>
+            </div>
+          </details>
+          <ul>
+            <li>Carrers</li>
+            <li>About</li>
+          </ul>
+
+          <ul>
+            <li>Login</li>
+            <li><a href="#" class="register-btn">Register</a></li>
+          </ul>
+        </div>
+      </aside>
+    </main>
+    <footer class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">
+        Frontend Mentor
+      </a>
+      . Coded by
+      <a href="#">Your Name Here</a>
+      .
+    </footer>
+    <script src="/scripts/index.js"></script>
+  </body>
+</html>
