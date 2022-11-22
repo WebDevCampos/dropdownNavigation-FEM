@@ -16,158 +16,127 @@
     <title>Frontend Mentor | Intro section with dropdown navigation</title>
   </head>
   <body>
-    <main>
-      <header>
-        <figure><img src="./images/logo.svg" alt="Snap company logo" /></figure>
+    <header>
+      <div class="nav-links">
+        <figure>
+          <img src="./images/logo.svg" alt="Snap company logo" />
+        </figure>
         <nav>
-          <div>
-            <ul style="display: flex">
-              <li class="top-feat" style="position: relative">
-                Features
-                <ul class="top-feat-content">
-                  <li>
-                    <img src="images/icon-todo.svg" />
-                    Todo List
-                  </li>
-                  <li>
-                    <img src="images/icon-calendar.svg" />
-                    Calendar
-                  </li>
-                  <li>
-                    <img src="images/icon-reminders.svg" />
-                    Reminders
-                  </li>
-                  <li>
-                    <img src="images/icon-planning.svg" />
-                    Planning
-                  </li>
-                </ul>
-              </li>
-              <li class="top-company">Company</li>
-              <li class="top-carrers"><a href="">Careers</a></li>
-              <li class="top-about"><a href="">About</a></li>
-            </ul>
-          </div>
-        </nav>
-        <div class="user-area">
-          <a>Login</a>
-          <a>Register</a>
-        </div>
-        <img src="/images/icon-menu.svg" class="open-menu-btn" />
-      </header>
-
-      <div class="content">
-        <section class="img-section">
-          <picture>
-            <source
-              media="(min-width: 1070px)"
-              srcset="images/image-hero-desktop.png"
-            />
-
+          <div class="feat">
+            <a href="#" style="margin-right: 1rem">Features</a>
             <img
-              src="images/image-hero-mobile.png"
-              alt=""
-              srcset=""
-              style="width: 100%"
+              src="images/icon-arrow-up.svg"
+              aria-hidden="true"
+              class="feat__arrow--up"
             />
-          </picture>
-        </section>
-        <section class="text-section">
-          <div
-            style="
-              height: 60%;
-              display: flex;
-              flex-direction: column;
-              justify-content: space-between;
-              margin-top: 5rem;
-            "
-          >
-            <h1>Make remote work</h1>
-            <p style="font-size: 2rem; line-height: 1.5">
-              Get your team in sync, no matter your location. Streamline
-              processes, create team rituals, and watch productivity soar.
-            </p>
-            <a href="#" class="btn">Learn more</a>
+            <img
+              src="images/icon-arrow-down.svg"
+              aria-hidden="true"
+              class="feat__arrow--down hide"
+            />
+
+            <div class="feat-content hide">
+              <a href="#todolist" target="_self">
+                <img src="images/icon-todo.svg" alt="" aria-hidden="true" />
+                Todo List
+              </a>
+
+              <a href="#calendar">
+                <img src="images/icon-calendar.svg" alt="" aria-hidden="true" />
+                Calendar
+              </a>
+
+              <a href="#reminders">
+                <img
+                  src="images/icon-reminders.svg"
+                  alt=""
+                  aria-hidden="true"
+                />
+                Reminders
+              </a>
+
+              <a href="#planning">
+                <img src="images/icon-planning.svg" alt="" aria-hidden="true" />
+                Planning
+              </a>
+            </div>
           </div>
 
-          <section class="clients-section">
-            <figure><img src="/images/client-databiz.svg" alt="" /></figure>
+          <div class="company">
+            <a href="#" style="margin-right: 1rem">Company</a>
+            <img
+              src="images/icon-arrow-up.svg"
+              aria-hidden="true"
+              class="company__arrow--up"
+            />
+            <img
+              src="images/icon-arrow-down.svg"
+              aria-hidden="true"
+              class="company__arrow--down hide"
+            />
+            <div class="company-content hide">
+              <a href="#">History</a>
+              <a href="#">Our Team</a>
+              <a href="#">Blog</a>
+            </div>
+          </div>
 
-            <figure><img src="/images/client-audiophile.svg" alt="" /></figure>
-
-            <figure><img src="/images/client-meet.svg" alt="" /></figure>
-
-            <figure><img src="/images/client-maker.svg" alt="" /></figure>
-          </section>
-        </section>
+          <a href="#">Careers</a>
+          <a href="#">About</a>
+        </nav>
       </div>
 
-      <aside>
-        <div class="sidenavbar">
-          <figure class="close-sidenav">
-            <img
-              src="/images/icon-close-menu.svg"
-              alt="close side navigation button"
-            />
-          </figure>
+      <div class="user-area">
+        <a href="#">Login</a>
+        <a href="#" class="register-btn">Register</a>
+      </div>
 
-          <details style="padding: 2rem">
-            <summary style="font-size: 2rem">Features</summary>
+      <img
+        src="/images/icon-menu.svg"
+        class="open-menu-btn"
+        alt="Open menu button"
+      />
+    </header>
+    <main>
+      <section>
+        <div class="text-section">
+          <h1>Make remote work</h1>
+          <p>
+            Get your team in sync, no matter your location. Streamline
+            processes, create team rituals, and watch productivity soar.
+          </p>
+          <a href="#" class="learn-more-btn">Learn More</a>
 
-            <div style="margin: 1rem 0">
-              <ul>
-                <li>
-                  <img src="images/icon-todo.svg" />
-                  Todo List
-                </li>
-                <li>
-                  <img src="images/icon-calendar.svg" />
-                  Calendar
-                </li>
-                <li>
-                  <img src="images/icon-reminders.svg" />
-                  Reminders
-                </li>
-                <li>
-                  <img src="images/icon-planning.svg" />
-                  Planning
-                </li>
-              </ul>
-            </div>
-          </details>
-
-          <details style="padding: 2rem">
-            <summary style="font-size: 2rem">Company</summary>
-
-            <div style="margin: 1rem 0">
-              <ul>
-                <li>History</li>
-                <li>Our Team</li>
-                <li>Blog</li>
-              </ul>
-            </div>
-          </details>
-          <ul>
-            <li>Carrers</li>
-            <li>About</li>
-          </ul>
-
-          <ul>
-            <li>Login</li>
-            <li><a href="#" class="register-btn">Register</a></li>
-          </ul>
+          <div class="clients-section">
+            <img src="images/client-databiz.svg" alt="" />
+            <img src="images/client-audiophile.svg" alt="" />
+            <img src="images/client-maker.svg" alt="" />
+            <img src="images/client-meet.svg" alt="" />
+          </div>
         </div>
-      </aside>
+
+        <div class="image-section">
+          <picture>
+            <source
+              media="(max-width: 980px)"
+              srcset="/images/image-hero-mobile.png"
+            />
+            <img src="images/image-hero-desktop.png" />
+          </picture>
+        </div>
+      </section>
+      <footer class="attribution">
+        <span>Challenge by</span>
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">
+          Frontend Mentor
+        </a>
+        .
+        <span>Coded by</span>
+        <a href="#">Marcus Rangel</a>
+        .
+      </footer>
     </main>
-    <footer class="attribution">
-      Challenge by
-      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">
-        Frontend Mentor
-      </a>
-      . Coded by
-      <a href="#">Your Name Here</a>
-      .
-    </footer>
+
     <script src="/scripts/index.js"></script>
   </body>
 </html>
