@@ -6,54 +6,85 @@
   --footer-link: hsl(228, 45%, 44%);
   --font-Epilogue: "Epilogue", sans-serif;
 }
+
 details summary,
+header a,
+aside a,
+body {
+  color: var(--medium-gray);
+}
+
 header a,
 aside a {
   font-size: 1.5rem;
-  color: var(--medium-gray);
 }
+
+.learn__more--btn:hover,
 header a:hover,
-aside a:hover {
+aside a:hover,
+.text__section h1 {
   color: var(--almost-black);
 }
 body {
   display: grid;
   place-items: center;
-
   font-family: var(--font-Epilogue);
   position: relative;
-  color: var(--medium-gray);
   background-color: var(--almost-white);
-  border: 1px solid red;
 }
-
 main {
-  max-width: 148rem;
+  max-width: 144rem;
   margin: 5rem auto 0;
   padding: 1rem;
 }
 header {
   width: 90%;
   margin: 2rem;
+}
+header,
+.feat__content,
+.company__content,
+.text__section {
   padding: 2rem;
 }
 header,
 nav,
-.nav-links,
-.user-area,
-.clients-section {
+.nav__wrapper,
+.user__area,
+section,
+.text__section,
+.clients__section,
+summary + div {
   display: flex;
+}
+header,
+nav,
+.nav__wrapper,
+.user__area,
+.text__section,
+.clients__section {
   justify-content: space-between;
+}
+header,
+nav,
+.nav__wrapper,
+.user__area,
+.clients__section {
   align-items: center;
 }
-.nav-links {
+
+.text__section,
+summary + div {
+  flex-direction: column;
+}
+.nav__wrapper {
   gap: 2rem;
 }
 nav {
   gap: 3rem;
   margin-left: 3rem;
 }
-.user-area {
+.user__area {
   gap: 5rem;
 }
 .register-btn {
@@ -65,7 +96,7 @@ nav {
 .register-btn:hover {
   border: 1px solid var(--almost-black);
 }
-.open-menu-btn {
+.open__menu--btn {
   display: none;
 }
 .feat,
@@ -73,80 +104,72 @@ nav {
   position: relative;
 }
 
-.feat-content,
-.company-content {
+.feat__content,
+.company__content {
   position: absolute;
   background: #fff;
   box-shadow: 3px 3px 13px -3px #ccc;
-  padding: 2rem;
   border-radius: 1rem;
   top: 4rem;
 }
-.feat-content a,
-.company-content a {
+.feat__content a,
+.company__content a {
   display: inline-flex;
 }
-.feat-content a {
+.feat__content a {
   gap: 1rem;
   padding: 0.5rem;
 }
 
-.company-content a {
+.company__content a {
   margin: 0.5rem 0;
 }
-.feat-content {
+.feat__content {
   right: 0rem;
 }
-.company-content {
+.company__content {
   width: 11rem;
 }
 section {
-  display: flex;
   gap: 10rem;
   width: 83%;
   margin: 0 auto;
 }
 section img {
-  max-width: 100%;
+  width: 100%;
 }
-.text-section {
-  padding: 2rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+.text__section {
   width: 100%;
   margin-top: 4rem;
 }
-.text-section h1 {
-  font-size: clamp(6rem, 5vw, 7.2vw);
-  color: var(--almost-black);
+.text__section h1 {
+  font-size: clamp(3rem, 5vw, 7.7rem);
 }
-.text-section p {
-  font-size: clamp(2rem, 2vw, 2.5rem);
-  line-height: 1.5;
+.text__section p {
+  font-size: clamp(1.6rem, 1.3vw, 2rem);
+  line-height: 2;
   margin: 1rem 0;
 }
-.learn-more-btn {
+.learn__more--btn {
   background: var(--almost-black);
   color: var(--almost-white);
   font-size: clamp(2rem, 2vw, 2.5rem);
-  width: 25rem;
+  width: 21rem;
   text-align: center;
-  padding: 2.5rem;
+  padding: 1.5rem;
   border-radius: 0.5rem;
 }
-.learn-more-btn:hover {
-  color: var(--almost-black);
+.learn__more--btn:hover {
   border: 1px solid var(--almost-black);
   background: 0;
 }
-.clients-section {
+.clients__section {
   margin: 2rem 0 0;
 }
-.clients-section img {
-  max-width: 20vw;
+.clients__section img {
+  max-width: 5vw;
 }
-.image-section {
+.image__section {
   width: 100%;
 }
 aside {
@@ -167,24 +190,67 @@ aside {
   right: 0;
   overflow: hidden;
 }
-.sidenav-content {
-  height: 80rem;
-  padding: 2rem;
-  width: 90%;
-  margin-left: auto;
-}
-.close-menu-btn {
-  text-align: end;
-  position: relative;
-  top: 2.3rem;
-  right: 3.5rem;
-}
-summary + div {
+
+.sidenav__content--links {
   display: flex;
   flex-direction: column;
+  height: 24rem;
+  gap: 3rem;
+  position: absolute;
+  top: 11rem;
+  left: 3rem;
+  width: 90%;
+}
+.sidenav__content--links a {
+  font-size: 2rem;
+}
+.sidenav__content--user-area {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  margin: 0 auto;
+  gap: 2rem;
+}
+.close__menu--btn {
+  text-align: end;
+  position: relative;
+  top: 4.3rem;
+  right: 5.7rem;
+}
+
+.feat__details--links a {
+  margin: 2rem;
+}
+.company__details--links a {
+  margin: 2rem 4rem;
+}
+.feat__details--links a img,
+.company__details--links a img {
+  margin: 0 2rem;
+}
+details > summary {
+  list-style: none;
+}
+summary {
+  font-size: 2rem;
+}
+summary::-webkit-details-marker {
+  display: none;
+}
+
+summary::after {
+  content: " " url("/images/icon-arrow-up.svg");
+}
+details[open] summary:after {
+  content: " " url("/images/icon-arrow-down.svg");
 }
 .attribution {
   margin: 2rem 0 0;
+}
+.attribution span,
+.attribution a {
+  font-size: clamp(1.2rem, 1.3vw, 2rem);
 }
 .attribution span {
   margin: 0 0.5rem;
@@ -195,6 +261,7 @@ summary + div {
 .attibution a:link {
   color: var(--footer-link);
 }
+
 .expand {
   width: 50%;
   overflow: visible;
@@ -218,10 +285,10 @@ summary + div {
 .hide {
   display: none;
 }
-
-@media screen and (max-width: 980px) {
+@media screen and (max-width: 900px) {
   main {
-    max-width: 60rem;
+    max-width: 55rem;
+    padding: 0;
   }
 
   section {
@@ -230,22 +297,39 @@ summary + div {
     gap: 1rem;
     width: 100%;
   }
-  .text-section {
+  .text__section {
     order: 2;
-    height: 55rem;
-    padding: 0 2rem;
     width: 100%;
-    margin-top: 1rem;
+    margin-top: 5rem;
+    text-align: center;
+    align-items: center;
+    justify-content: inherit;
+    gap: 5rem;
+    padding: 0;
   }
-
-  .open-menu-btn {
+  .text__section h1 {
+    font-size: clamp(3.5rem, 6vw, 6rem);
+  }
+  .text__section p {
+    font-size: clamp(1.5rem, 1.3vw, 2.1rem);
+    margin: 1rem;
+  }
+  .clients__section {
+    width: 90%;
+  }
+  .clients__section img {
+    max-width: 10vw;
+  }
+  .open__menu--btn {
     display: block;
   }
-  header {
-    justify-content: space-between;
+  .open__menu--btn:hover,
+  .close__menu--btn:hover,
+  summary:hover {
+    cursor: pointer;
   }
   nav,
-  .user-area {
+  .user__area {
     display: none;
   }
 }
@@ -257,7 +341,10 @@ summary + div {
   .expand {
     width: 85%;
   }
-  .close-menu-btn {
-    right: 0.5rem;
+  .close__menu--btn {
+    right: 2.3rem;
+  }
+  .clients__section img {
+    max-width: 15vw;
   }
 }

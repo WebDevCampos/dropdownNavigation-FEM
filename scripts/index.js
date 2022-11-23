@@ -19,8 +19,8 @@ company.addEventListener("click", () => {
   companyContent.classList.toggle("hide");
 });
 
-const openMenuBtn = document.querySelector(".open-menu-btn");
-const closeMenuBtn = document.querySelector(".close-menu-btn");
+const openMenuBtn = document.querySelector(".open__menu--btn");
+const closeMenuBtn = document.querySelector(".close__menu--btn");
 const aside = document.querySelector("aside");
 const sideNav = document.querySelector(".sidenav");
 
@@ -30,14 +30,14 @@ openMenuBtn.addEventListener("click", () => {
   sideNav.classList.add("expand");
   sideNav.classList.remove("shrink");
 });
-closeMenuBtn.addEventListener("click", () => {
-  aside.classList.remove("show");
-  aside.classList.add("fade");
-  sideNav.classList.remove("expand");
-  sideNav.classList.add("shrink");
-});
+// closeMenuBtn.addEventListener("click", () => {
+//   aside.classList.remove("show");
+//   aside.classList.add("fade");
+//   sideNav.classList.remove("expand");
+//   sideNav.classList.add("shrink");
+// });
 const closeWhenResize = () => {
-  if (window.innerWidth >= 980) {
+  if (window.innerWidth >= 900) {
     aside.classList.remove("show");
     sideNav.classList.remove("expand");
   }

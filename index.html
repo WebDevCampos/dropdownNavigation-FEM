@@ -17,7 +17,7 @@
   </head>
   <body>
     <header>
-      <div class="nav-links">
+      <div class="nav__wrapper">
         <figure>
           <img src="./images/logo.svg" alt="Snap company logo" />
         </figure>
@@ -35,7 +35,7 @@
               class="feat__arrow--down hide"
             />
 
-            <div class="feat-content hide">
+            <div class="feat__content hide">
               <a href="#todolist" target="_self">
                 <img src="images/icon-todo.svg" alt="" aria-hidden="true" />
                 Todo List
@@ -74,7 +74,7 @@
               aria-hidden="true"
               class="company__arrow--down hide"
             />
-            <div class="company-content hide">
+            <div class="company__content hide">
               <a href="#">History</a>
               <a href="#">Our Team</a>
               <a href="#">Blog</a>
@@ -86,28 +86,28 @@
         </nav>
       </div>
 
-      <div class="user-area">
+      <div class="user__area">
         <a href="#">Login</a>
         <a href="#" class="register-btn">Register</a>
       </div>
 
       <img
         src="/images/icon-menu.svg"
-        class="open-menu-btn"
+        class="open__menu--btn"
         alt="Open menu button"
       />
     </header>
     <main>
       <section>
-        <div class="text-section">
+        <div class="text__section">
           <h1>Make remote work</h1>
           <p>
             Get your team in sync, no matter your location. Streamline
             processes, create team rituals, and watch productivity soar.
           </p>
-          <a href="#" class="learn-more-btn">Learn More</a>
+          <a href="#" class="learn__more--btn">Learn More</a>
 
-          <div class="clients-section">
+          <div class="clients__section">
             <img src="images/client-databiz.svg" alt="" />
             <img src="images/client-audiophile.svg" alt="" />
             <img src="images/client-maker.svg" alt="" />
@@ -115,10 +115,10 @@
           </div>
         </div>
 
-        <div class="image-section">
+        <div class="image__section">
           <picture>
             <source
-              media="(max-width: 980px)"
+              media="(max-width: 900px)"
               srcset="/images/image-hero-mobile.png"
             />
             <img src="images/image-hero-desktop.png" />
@@ -138,24 +138,16 @@
 
     <aside>
       <div class="sidenav">
-        <div class="sidenav-content">
-          <figure class="close-menu-btn">
+        <div class="sidenav__content">
+          <figure class="close__menu--btn">
             <img src="images/icon-close-menu.svg" alt="Close menu button" />
           </figure>
 
-          <div
-            style="
-              display: flex;
-              flex-direction: column;
-              gap: 3rem;
-              position: relative;
-              top: 5rem;
-            "
-          >
-            <details>
+          <div class="sidenav__content--links">
+            <details class="feat__details">
               <summary>Features</summary>
 
-              <div>
+              <div class="feat__details--links">
                 <a href="#todolist" target="_self">
                   <img src="images/icon-todo.svg" alt="" aria-hidden="true" />
                   Todo List
@@ -190,10 +182,10 @@
               </div>
             </details>
 
-            <details>
+            <details class="company__details">
               <summary>Company</summary>
 
-              <div>
+              <div class="company__details--links">
                 <a href="#">History</a>
                 <a href="#">Our Team</a>
                 <a href="#">Blog</a>
@@ -202,8 +194,11 @@
 
             <a href="#">Careers</a>
             <a href="#">About</a>
-            <a href="#">Login</a>
-            <a href="#" class="register-btn">Register</a>
+
+            <div class="sidenav__content--user-area">
+              <a href="#">Login</a>
+              <a href="#" class="register-btn">Register</a>
+            </div>
           </div>
         </div>
       </div>
