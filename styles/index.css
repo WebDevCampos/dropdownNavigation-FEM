@@ -6,21 +6,25 @@
   --footer-link: hsl(228, 45%, 44%);
   --font-Epilogue: "Epilogue", sans-serif;
 }
-a {
+details summary,
+header a,
+aside a {
   font-size: 1.5rem;
   color: var(--medium-gray);
 }
-a:hover {
+header a:hover,
+aside a:hover {
   color: var(--almost-black);
 }
 body {
   display: grid;
   place-items: center;
-  height: 100vh;
+
   font-family: var(--font-Epilogue);
   position: relative;
   color: var(--medium-gray);
   background-color: var(--almost-white);
+  border: 1px solid red;
 }
 
 main {
@@ -31,7 +35,6 @@ main {
 header {
   width: 90%;
   margin: 2rem;
-
   padding: 2rem;
 }
 header,
@@ -57,6 +60,7 @@ nav {
   border: 1px solid var(--medium-gray);
   padding: 1.5rem 2rem;
   border-radius: 1.5rem;
+  text-align: center;
 }
 .register-btn:hover {
   border: 1px solid var(--almost-black);
@@ -111,7 +115,7 @@ section img {
   flex-direction: column;
   justify-content: space-between;
   width: 100%;
-  margin-top: 6rem;
+  margin-top: 4rem;
 }
 .text-section h1 {
   font-size: clamp(6rem, 5vw, 7.2vw);
@@ -139,25 +143,101 @@ section img {
 .clients-section {
   margin: 2rem 0 0;
 }
+.clients-section img {
+  max-width: 20vw;
+}
 .image-section {
   width: 100%;
+}
+aside {
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3);
+  position: absolute;
+  right: 0;
+  opacity: 0;
+  z-index: -1;
+  transition: 0.5s;
+}
+.sidenav {
+  background: var(--almost-white);
+  width: 0;
+  height: 100%;
+  position: absolute;
+  right: 0;
+  overflow: hidden;
+}
+.sidenav-content {
+  height: 80rem;
+  padding: 2rem;
+  width: 90%;
+  margin-left: auto;
+}
+.close-menu-btn {
+  text-align: end;
+  position: relative;
+  top: 2.3rem;
+  right: 3.5rem;
+}
+summary + div {
+  display: flex;
+  flex-direction: column;
+}
+.attribution {
+  margin: 2rem 0 0;
+}
+.attribution span {
+  margin: 0 0.5rem;
+}
+.attribution a,
+.attribution a:visited,
+.attibution a:active,
+.attibution a:link {
+  color: var(--footer-link);
+}
+.expand {
+  width: 50%;
+  overflow: visible;
+  transition: 0.3s;
+}
+.shrink {
+  width: 0;
+  overflow: hidden;
+  transition: 0.3s;
+}
+.show {
+  display: block;
+  opacity: 1;
+  z-index: 1;
+}
+.fade {
+  opacity: 0;
+  z-index: -1;
+  transition: 1s;
 }
 .hide {
   display: none;
 }
+
 @media screen and (max-width: 980px) {
   main {
     max-width: 60rem;
   }
+
   section {
     flex-direction: column;
     margin: 0;
     gap: 1rem;
+    width: 100%;
   }
   .text-section {
     order: 2;
     height: 55rem;
+    padding: 0 2rem;
+    width: 100%;
+    margin-top: 1rem;
   }
+
   .open-menu-btn {
     display: block;
   }
@@ -167,5 +247,17 @@ section img {
   nav,
   .user-area {
     display: none;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  header {
+    width: 100%;
+  }
+  .expand {
+    width: 85%;
+  }
+  .close-menu-btn {
+    right: 0.5rem;
   }
 }

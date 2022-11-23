@@ -1,6 +1,3 @@
-// const sideNav = document.querySelector("aside");
-// const closeSideNav = document.querySelector(".close-sidenav");
-// const openMenuBtn = document.querySelector(".open-menu-btn");
 const features = document.querySelector(".feat");
 const featContent = document.querySelector(".feat-content");
 const arrowUp = document.querySelector(".feat__arrow--up");
@@ -9,19 +6,6 @@ const company = document.querySelector(".company");
 const companyContent = document.querySelector(".company-content");
 const companyArrowUp = document.querySelector(".company__arrow--up");
 const companyArrowDown = document.querySelector(".company__arrow--down");
-// openMenuBtn.addEventListener("click", () => {
-//   sideNav.classList.toggle("expand");
-// });
-// closeSideNav.addEventListener("click", () => {
-//   sideNav.classList.toggle("expand");
-// });
-// const closeWhenResize = () => {
-//   if (window.innerWidth > 1100) {
-//     sideNav.classList.remove("expand");
-//   }
-// };
-
-// window.addEventListener("resize", closeWhenResize);
 
 features.addEventListener("click", (e) => {
   arrowUp.classList.toggle("hide");
@@ -34,3 +18,29 @@ company.addEventListener("click", () => {
   companyArrowDown.classList.toggle("hide");
   companyContent.classList.toggle("hide");
 });
+
+const openMenuBtn = document.querySelector(".open-menu-btn");
+const closeMenuBtn = document.querySelector(".close-menu-btn");
+const aside = document.querySelector("aside");
+const sideNav = document.querySelector(".sidenav");
+
+openMenuBtn.addEventListener("click", () => {
+  aside.classList.remove("fade");
+  aside.classList.add("show");
+  sideNav.classList.add("expand");
+  sideNav.classList.remove("shrink");
+});
+closeMenuBtn.addEventListener("click", () => {
+  aside.classList.remove("show");
+  aside.classList.add("fade");
+  sideNav.classList.remove("expand");
+  sideNav.classList.add("shrink");
+});
+const closeWhenResize = () => {
+  if (window.innerWidth >= 980) {
+    aside.classList.remove("show");
+    sideNav.classList.remove("expand");
+  }
+};
+
+window.addEventListener("resize", closeWhenResize);
