@@ -325,7 +325,8 @@ details[open] summary:after {
   }
   .open__menu--btn:hover,
   .close__menu--btn:hover,
-  summary:hover {
+  summary:hover,
+  img:hover {
     cursor: pointer;
   }
   nav,
