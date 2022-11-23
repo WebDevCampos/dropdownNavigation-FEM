@@ -26,7 +26,7 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
+![](/images/screenshot.PNG)
 
 ### Links
 
@@ -47,8 +47,6 @@ Users should be able to:
 - [Dilshan Kelsen](https://dilshankelsen.com/style-arrow-of-html-accordion/)
 - [How to position <detail> marker to come after <summary>](https://stackoverflow.com/questions/56758098/how-to-position-detail-marker-to-come-after-summary)
   - These two articles helped me to customize the markers of `<details>` tag.
-
-**Note: Delete this note and replace the list above with resources that helped you during the challenge. These could come in handy for anyone viewing your solution or for yourself when you look back on this project in the future.**
 
 ## Author
 
